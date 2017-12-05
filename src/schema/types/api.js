@@ -2,7 +2,7 @@ import { GraphQLID,
   GraphQLString,
   GraphQLNonNull,
   GraphQLObjectType
-} from 'graphql'
+} from 'graphql';
 
 // define type for apis
 var apiType = new GraphQLObjectType({
@@ -17,4 +17,4 @@ var apiType = new GraphQLObjectType({
   })
 });
 
-export default apiType; 
+export default apiType;
