@@ -5,7 +5,7 @@ import { GraphQLID,
 } from 'graphql';
 
 // define type for apis
-var apiType = new GraphQLObjectType({
+export default new GraphQLObjectType({
   name :'Api',
   fields: () =>({
     id: {
@@ -16,5 +16,3 @@ var apiType = new GraphQLObjectType({
     }
   })
 });
-
-export default apiType;
