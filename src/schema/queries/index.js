@@ -4,6 +4,6 @@ import api from './api';
 
 export default {
     ...post,
-    ...profile
+    ...profile,
     ...apis
 };
