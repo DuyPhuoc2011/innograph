@@ -5,12 +5,7 @@ import apiType from '../../types/api';
 
 export default {
   type: new GraphQLList(apiType),
-  args: {
-    limit : {
-      name: 'limit',
-      type: GraphQLInt
-    }
-  },
+  args: {},
   resolve (root, params, { ctrl }){
     return ctrl.api.list(params);
   }

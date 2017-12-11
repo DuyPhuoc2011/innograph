@@ -17,6 +17,9 @@ function init(path, _app, _ctrl) {
       },
       profile: {
         load: (_ctrl && _ctrl.profile) ? _ctrl.profile.load : defaultCtrl.profile.load,
+      },
+      api:{
+        list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list
       }
     };
     graphqlHTTP({
