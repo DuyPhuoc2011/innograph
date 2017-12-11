@@ -1,5 +1,6 @@
-import GraphQLList from 'graphql';
-import GraphQLInt from 'graphql';
+import { GraphQLList,
+        GraphQLInt
+} from 'graphql';
 
 import apiType from '../../types/api';
 
