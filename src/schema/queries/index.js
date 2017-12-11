@@ -5,5 +5,5 @@ import api from './api';
 export default {
     ...post,
     ...profile,
-    ...apis
+    ...api
 };
