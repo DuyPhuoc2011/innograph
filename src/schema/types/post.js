@@ -17,6 +17,5 @@ export default new GraphQLObjectType({
     content: {
       type: GraphQLString
     }
-
   })
 });

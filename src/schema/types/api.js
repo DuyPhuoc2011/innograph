@@ -18,4 +18,5 @@ export default new GraphQLObjectType({
     childs: {
       type: new GraphQLList(Api)
     }
+  })
 });
