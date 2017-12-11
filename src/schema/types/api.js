@@ -1,7 +1,8 @@
 import { GraphQLID,
   GraphQLString,
   GraphQLNonNull,
-  GraphQLObjectType
+  GraphQLObjectType,
+  GraphQLList
 } from 'graphql';
 
 // define type for apis
@@ -13,6 +14,8 @@ export default new GraphQLObjectType({
     },
     name : {
       type: new GraphQLNonNull(GraphQLString)
+    },
+    childs: {
+      type new GraphQLList(Api)
     }
-  })
 });
