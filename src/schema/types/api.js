@@ -5,14 +5,14 @@ import { GraphQLID,
   GraphQLList
 } from 'graphql';
 
-const Childs = new GraphQLObjectType({
+const ChildsType = new GraphQLObjectType({
   name: 'Childs',
   fields:()=>({
     name: {
       type: new GraphQLNonNull(GraphQLString)
     },
     childs:{
-      type: [Childs]
+      type: new GraphQLList(Childs)
     }
   })
 });
@@ -28,7 +28,7 @@ export default new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: [Childs]
+      type: new GraphQLList(ChildsType)
     }
   })
 });
