@@ -14,7 +14,7 @@ const ChildsType = new GraphQLObjectType({
     childs: {
       type: new GraphQLList(ChildsType),
       resolve: ()=>{
-        return this.find().exec();
+        return repo.find().exec();
       }
     }
   })
