@@ -12,7 +12,7 @@ const ChildsType = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      new GraphQLList(ChildsType)
+      type: new GraphQLList(ChildsType)
     }
   })
 });
