@@ -5,7 +5,7 @@ import { GraphQLID,
   GraphQLList
 } from 'graphql';
 
-new GraphQLObjectType({
+const Childs = new GraphQLObjectType({
   name: "Childs",
   fields:()=>({
     name: {
