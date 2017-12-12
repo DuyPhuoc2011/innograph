@@ -6,7 +6,7 @@ import { GraphQLID,
 } from 'graphql';
 
 new GraphQLObjectType({
-  name: 'Childs',
+  name: "Childs",
   fields:()=>({
     name: {
       type: new GraphQLNonNull(GraphQLString)
