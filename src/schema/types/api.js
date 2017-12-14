@@ -28,7 +28,7 @@ export default new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(ChildsType),
+      type: new GraphQLList(Childs),
       args: {},
       resolve: ()=>{
         return Childs.find();
