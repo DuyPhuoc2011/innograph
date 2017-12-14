@@ -31,7 +31,7 @@ export default new GraphQLObjectType({
       type: new GraphQLList(Childs),
       args: {},
       resolve: ()=>{
-        return Childs.find();
+        return this.find();
       }
     }
   })
