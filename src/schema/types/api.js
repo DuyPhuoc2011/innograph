@@ -5,7 +5,7 @@ import { GraphQLID,
   GraphQLList
 } from 'graphql';
 
-const ChildsType = new GraphQLObjectType({
+const Childs = new GraphQLObjectType({
   name: 'Childs',
   fields:()=>({
     name: {
@@ -31,7 +31,7 @@ export default new GraphQLObjectType({
       type: new GraphQLList(ChildsType),
       args: {},
       resolve: ()=>{
-        return ChildsType.find();
+        return Childs.find();
       }
     }
   })
