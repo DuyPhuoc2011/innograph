@@ -30,9 +30,9 @@ export default new GraphQLObjectType({
     childs: {
       type: new GraphQLList(Childs),
       args: {},
-      resolve: ()=>{
+      resolve: ()=>({
         return this.find();
-      }
+      })
     }
   })
 });
