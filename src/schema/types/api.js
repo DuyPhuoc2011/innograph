@@ -12,10 +12,7 @@ const ChildsType = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(ChildsType),
-      resolve: ()=>{
-        return repo.find().exec();
-      }
+      type: new GraphQLList(ChildsType)
     }
   })
 });
