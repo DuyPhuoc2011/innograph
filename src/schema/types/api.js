@@ -30,7 +30,7 @@ const Api= new GraphQLObjectType({
     childs: {
       type: new GraphQLList(Api),
       resolve:()=>{
-        return this.find({},childs:1);
+        return this.find({},{childs:1});
       }
     }
   })
