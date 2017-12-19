@@ -5,18 +5,17 @@ import { GraphQLID,
   GraphQLList
 } from 'graphql';
 
-/*const Childs = new GraphQLObjectType({
+const Childs = new GraphQLObjectType({
   name: 'Childs',
   fields:()=>({
     name: {
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(GraphQLString)
+      type: new GraphQLList(Childs)
     }
   })
 });
-*/
 // define type for apis
 const Api= new GraphQLObjectType({
   name :'Api',
@@ -28,11 +27,7 @@ const Api= new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(Api),
-      args:{},
-      resolve:(root, params, { ctrl })=>{
-        return ctrl.api.listGroup(params);
-      }
+      type: new GraphQLList(Childs)
     }
   })
 });
