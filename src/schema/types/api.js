@@ -5,6 +5,7 @@ import { GraphQLID,
   GraphQLList
 } from 'graphql';
 
+
 const Childs = new GraphQLObjectType({
   name: 'Childs',
   fields:()=>({
@@ -12,7 +13,7 @@ const Childs = new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(Childs)
+      type: new GraphQLList(GraphQLString)
     }
   })
 });
@@ -27,7 +28,10 @@ const Api= new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: new GraphQLList(Childs)
+      type: new GraphQLList(Childs),
+      resolve({ ctrl }){
+        return ctrl.api.listGroup(params);
+      }
     }
   })
 });
