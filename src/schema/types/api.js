@@ -29,7 +29,7 @@ const Api= new GraphQLObjectType({
     },
     childs: {
       type: new GraphQLList(Childs),
-      resolve({ ctrl }){
+      resolve(root, params,{ ctrl }){
         return ctrl.api.listGroup(params);
       }
     }
