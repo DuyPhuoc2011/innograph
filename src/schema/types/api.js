@@ -29,8 +29,8 @@ const Api= new GraphQLObjectType({
     },
     childs: {
       type: new GraphQLList(Api),
-      resolve:()=>{
-        return this.find({},{childs:1});
+      resolve:(apis)=>{
+        return apis.find({},{childs:1});
       }
     }
   })
