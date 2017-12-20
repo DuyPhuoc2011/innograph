@@ -34,7 +34,7 @@ const Api= new GraphQLObjectType({
       type: new GraphQLNonNull(GraphQLString)
     },
     childs: {
-      type: GraphQLList(GraphQLString)
+      type: new GraphQLList(GraphQLString)
     }
   })
 });
