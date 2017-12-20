@@ -22,7 +22,7 @@ function init(path, _app, _ctrl) {
         list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list
       },
       group:{
-        listGroup: _ctrl.group.listGroup
+        listGroup: _ctrl.api.listGroup
       }
     };
     graphqlHTTP({
