@@ -19,14 +19,13 @@ function init(path, _app, _ctrl) {
         load: (_ctrl && _ctrl.profile) ? _ctrl.profile.load : defaultCtrl.profile.load,
       },
       api:{
-        list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list,
-        listGroup: _ctrl.api.listGroup
+        list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list
       }
     };
     graphqlHTTP({
       schema,
       graphiql: true,
-      context: { ctrl }
+      context: {ctrl } 
     })(req, res);
   });
   if (!_app) app.listen(1111);
