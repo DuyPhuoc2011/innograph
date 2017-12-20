@@ -29,8 +29,9 @@ const Api= new GraphQLObjectType({
     },
     childs: {
       type: new GraphQLList(Childs),
-      resolve(root, params,{ ctrl }){
-        return ctrl.api.listGroup(params);
+      resolve(apis,{ ctrl }){
+        const { _id }= apis;
+        
       }
     }
   })
