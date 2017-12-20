@@ -19,9 +19,7 @@ function init(path, _app, _ctrl) {
         load: (_ctrl && _ctrl.profile) ? _ctrl.profile.load : defaultCtrl.profile.load,
       },
       api:{
-        list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list
-      },
-      group:{
+        list: (_ctrl && _ctrl.api)? _ctrl.api.list : defaultCtrl.api.list,
         listGroup: _ctrl.api.listGroup
       }
     };

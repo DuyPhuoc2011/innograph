@@ -37,7 +37,7 @@ const Api= new GraphQLObjectType({
       type: new GraphQLList(Childs),
       resolve(apis,{ ctrl }){
         const { _id }= apis;
-        ctrl.group.listGroup(_id);
+        ctrl.api.listGroup(_id);
       }
     }
   })
