@@ -9,6 +9,12 @@ import { GraphQLID,
 const Childs = new GraphQLObjectType({
   name: 'Childs',
   fields:()=>({
+    id:{
+      type: new GraphQLNonNull(GraphQLID)
+    },
+    uid: {
+      type : new GraphQLNonNull(GraphQLString)
+    },
     name: {
       type: new GraphQLNonNull(GraphQLString)
     },
@@ -31,7 +37,7 @@ const Api= new GraphQLObjectType({
       type: new GraphQLList(Childs),
       resolve(apis,{ ctrl }){
         const { _id }= apis;
-        
+        ctrl.group.listGroup(_id);
       }
     }
   })
