@@ -9,7 +9,7 @@ const api = new GraphQLObjectType({
   name: 'apiItem',
   fields:()=>({
     name : {
-      type: String
+      type: GraphQLString
     }
   })
 });
