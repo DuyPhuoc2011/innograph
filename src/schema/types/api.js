@@ -6,7 +6,7 @@ import { GraphQLID,
 } from 'graphql';
 
 const api = new GraphQLObjectType({
-  name: apiItem,
+  name: 'apiItem',
   fields:()=>({
     name : {
       type: String
